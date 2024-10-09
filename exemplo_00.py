@@ -1,16 +1,10 @@
-from loguru import logger
+from utils_log import log_decorator
 
-logger.add("meu_log.log")
+#ogger.add("meu_log.log")
 
-
+@log_decorator
 def soma(x, y):
-   try:
-        soma = x + y
-        logger.info(f"voce digitou valores corretos, parabéns {soma}") # se tudo funcionar!
-        return soma
-   except:
-        logger.critical("voce tem que digitar valores corretos")
+     return x + y
 
 soma(2, 3)
 soma(2, 7)
-soma(2, "3")

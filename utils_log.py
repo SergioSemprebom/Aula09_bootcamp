@@ -19,7 +19,7 @@ logger.add(
 logger.add(
                 "meu_arquivo_de_logs.log",
                 format="{time} {level} {message} {file}",
-                level="ERROR"
+                level="INFO"
             )
 def log_decorator(func):
     @wraps(func)
